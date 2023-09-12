@@ -6,7 +6,7 @@
 /*   By: tosuman <timo42@proton.me>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/11 22:27:48 by tosuman           #+#    #+#             */
-/*   Updated: 2023/09/12 01:03:33 by tosuman          ###   ########.fr       */
+/*   Updated: 2023/09/12 02:20:02 by tosuman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # endif
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10
+#  define BUFFER_SIZE 42
 # endif
 
 # include <sys/types.h>

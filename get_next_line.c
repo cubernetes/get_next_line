@@ -6,7 +6,7 @@
 /*   By: tosuman <timo42@proton.me>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 12:19:18 by tosuman           #+#    #+#             */
-/*   Updated: 2023/09/12 02:05:26 by tosuman          ###   ########.fr       */
+/*   Updated: 2023/09/12 02:19:07 by tosuman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,24 +53,10 @@ int	main(void)
 	int		max_iter;
 	char	*line;
 
-	fd = open("./test3.txt", O_RDONLY);
-	(line = get_next_line(fd), printf("<%s>", line), fflush(stdout),
-		free(line));
-	(line = get_next_line(fd), printf("<%s>", line), fflush(stdout),
-		free(line));
-	// (line = get_next_line(fd), printf("<%s>", line), fflush(stdout),
-	// 	free(line));
-	// (line = get_next_line(fd), printf("<%s>", line), fflush(stdout),
-	// 	free(line));
-	// (line = get_next_line(fd), printf("<%s>", line), fflush(stdout),
-	// 	free(line));
-	// (line = get_next_line(fd), printf("<%s>", line), fflush(stdout),
-	// 	free(line));
-	// (line = get_next_line(fd), printf("<%s>", line), fflush(stdout),
-	// 	free(line));
-	// max_iter = 100;
-	// while ((line = get_next_line(fd)) && (max_iter-- > 0))
-	// 	(printf("<%s>", line), fflush(stdout), free(line));
+	fd = open("./test.txt", O_RDONLY);
+	max_iter = 100;
+	while ((line = get_next_line(fd)) && (max_iter-- > 0))
+		(printf("<%s>", line), fflush(stdout), free(line));
 	close(fd);
 }
 */
