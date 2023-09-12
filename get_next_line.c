@@ -6,7 +6,7 @@
 /*   By: tosuman <timo42@proton.me>                 +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 12:19:18 by tosuman           #+#    #+#             */
-/*   Updated: 2023/09/12 02:19:07 by tosuman          ###   ########.fr       */
+/*   Updated: 2023/09/12 09:43:48 by tosuman          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*get_next_line(int fd)
 	(free(x.prv[fd]), x.prv[fd] = malloc(sizeof(char) * (x.i + x.bread + 1)));
 	if (!x.prv[fd])
 		return (free(x.buf), free(x.prv[fd]), x.len = 0, x.prv[fd] = NULL);
-	while (x.buf[x.len + 1 + ++x.j] || !x.prv[fd])
+	while (x.buf[x.len + 1 + ++x.j])
 		x.prv[fd][x.j] = x.buf[x.len + 1 + x.j];
 	return (x.prv[fd][x.j] = 0, x.buf[x.len + 1] = 0, x.len = 0, x.buf);
 }
